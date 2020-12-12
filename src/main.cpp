@@ -176,6 +176,11 @@ void findEyes(cv::Mat frame_gray, cv::Rect face) {
     circle(faceROI, rightRightCorner, 3, 200);
   }
 
+  // MZ I want to get x,y of each pupil on screen
+  // for validation
+  // Only one eyes, as expectation is same for both
+  printf("%d\t%d\n", leftPupil.x, leftPupil.y);
+
   imshow(face_window_name, faceROI);
 //  cv::Rect roi( cv::Point( 0, 0 ), faceROI.size());
 //  cv::Mat destinationROI = debugImage( roi );
